@@ -11,7 +11,7 @@
 
 
 <script src="../js/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="../js/move-top.js"  type="text/javascript"></script>
+<script src="../js/move-top.js"  type="text/javascript"></script> 
 <script src="../js/easing.js"  type="text/javascript"></script>
 <script src="../js/bootstrap.js"  type="text/javascript"></script>
 <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
