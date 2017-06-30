@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lucrative Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <title>TSWREIS CISTracker</title>
 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -8,7 +12,7 @@
 <link href="../css/jquery.treetable.css" rel="stylesheet" type="text/css" />
 <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/font-awesome.css" rel="stylesheet">
-
+<link href="../css/assertManagement.css" rel="stylesheet" type="text/css" media="all" />
 
 <script src="../js/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="../js/move-top.js"  type="text/javascript"></script> 
@@ -20,341 +24,6 @@
 <script src="../js/jquery.loadingoverlay.min.js"  type="text/javascript"></script>
 <script src="../js/jquery.loadingoverlay_progress.min.js"  type="text/javascript"></script>
 
-
-
-<style>
-#primary_nav_wrap {
-	margin-top: 15px
-}
-
-#primary_nav_wrap ul {
-	list-style: none;
-	position: relative;
-	float: left;
-	margin: 0;
-	padding: 0
-}
-
-#primary_nav_wrap ul a {
-	display: block;
-	color: #333;
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 32px;
-	padding: 0 15px;
-	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-		sans-serif
-}
-
-#primary_nav_wrap ul li {
-	position: relative;
-	float: left;
-	margin: 0;
-	padding: 0
-}
-
-#primary_nav_wrap ul li.current-menu-item {
-	background: #ddd
-}
-
-#primary_nav_wrap ul li:hover {
-	background: #f6f6f6
-}
-
-#primary_nav_wrap ul ul {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background: #fff;
-	padding: 0
-}
-
-#primary_nav_wrap ul ul li {
-	float: none;
-	width: 200px
-}
-
-#primary_nav_wrap ul ul a {
-	line-height: 120%;
-	padding: 10px 15px
-}
-
-#primary_nav_wrap ul ul ul {
-	top: 0;
-	left: 100%
-}
-
-#primary_nav_wrap ul li:hover>ul {
-	display: block
-}
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
-	{
-	border-width: 0;
-}
-
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
-.nav-stacked > li + li {
-    margin-top: 0px;
-}
-
-.nav-tabs>li>a {
-	padding: 50px 100px 50px 100px !important;
-	color: #AAAAAA;
-	background-color: #E3F2FD;
-	border: 0px;
-	border-radius: 0px;
-	margin: 0;
-}
-.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-    background-color: #448AFF; 
-    color: #FFFFFF;
-    z-index: 99;
-    transition: all 0.5s ease 0s;
-}
-
-.nav-tabs>li.active>a {
-	color: #FFFFFF;
-	background-color: #2962FF;
-	box-shadow: 0 0px 5px rgba(0, 0, 0, .6);
-	z-index: 100;
-}
-.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-   color: #FFFFFF;
-   background-color: #2962FF;   
-   box-shadow: 0 0px 5px rgba(0, 0, 0, .6);
-   transition: all 0.5s ease 0s;
-}
-
-.btn {
-	display: inline-block;
-	padding: 6px 12px;
-	margin-bottom: 0;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.42857143;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-image: none;
-	border: 1px solid transparent;
-	border-radius: 1px;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0
-		rgba(0, 0, 0, 0.12);
-	transition: all 0.5s ease 0s;
-}
-
-.btn-primary {
-	background-color: #2962FF;
-}
-
-.btn-primary:hover, .btn-primary:focus {
-	background-color: #0D47A1;
-}
-
-.tabs-left, .tabs-right {
-	border-bottom: none;
-	padding-top: 2px;
-}
-
-.tabs-left {
-	border-right: 1px solid #ddd;
-}
-
-.tabs-right {
-	border-left: 1px solid #ddd;
-}
-
-.tabs-left>li, .tabs-right>li {
-	float: none;
-	margin-bottom: 2px;
-}
-
-.tabs-left>li {
-	margin-right: -1px;
-}
-
-.tabs-right>li {
-	margin-left: -1px;
-}
-
-.tabs-left>li.active>a, .tabs-left>li.active>a:hover, .tabs-left>li.active>a:focus
-	{
-	border-bottom-color: #ddd;
-	border-right-color: transparent;
-}
-
-.tabs-right>li.active>a, .tabs-right>li.active>a:hover, .tabs-right>li.active>a:focus
-	{
-	border-bottom: 1px solid #ddd;
-	border-left-color: transparent;
-}
-
-.tabs-left>li>a {
-	border-radius: 4px 0 0 4px;
-	margin-right: 0;
-	display: block;
-}
-
-.tabs-right>li>a {
-	border-radius: 0 4px 4px 0;
-	margin-right: 0;
-}
-
-.dropbtn {
-	background-color: #4CAF50;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-	background-color: #3e8e41;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	overflow: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown a:hover {
-	background-color: #f1f1f1
-}
-
-.show {
-	display: block;
-}
-</style>
-
-<style type="text/css">
-ul.list-group:after {
-	clear: both;
-	display: block;
-	content: "";
-}
-
-.list-group-item {
-	float: left;
-}
-
-.two-col {
-	overflow: hidden; /* Makes this div contain its floats */
-}
-
-.two-col .col1, .two-col .col2, .two-col .col3 {width 25%;
-	
-}
-
-.two-col .col1 {
-	float: left;
-}
-
-.two-col .col2 {
-	float: left;
-}
-
-.two-col .col3 {
-	float: right;
-}
-
-.two-col label {
-	display: block;
-}
-
-p {
-	width: auto;
-	float: left;
-	margin-right: 10px;
-}
-
-* {
-	box-sizing: border-box
-}
-
-body {
-	font-family: "Lato", sans-serif;
-}
-
-/* Style the tab */
-div.tab {
-	float: left;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
-	width: 30%;
-	height: 300px;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-	display: block;
-	background-color: inherit;
-	color: black;
-	padding: 22px 16px;
-	width: 100%;
-	border: none;
-	outline: none;
-	text-align: left;
-	cursor: pointer;
-	transition: 0.3s;
-	font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-	background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-div.tab button.active {
-	background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-	float: left;
-	padding: 0px 12px;
-	border: 1px solid #ccc;
-	width: 70%;
-	border-left: none;
-	height: 300px;
-}
-</style>
-
-
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Lucrative Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
 	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 	function hideURLbar(){ window.scrollTo(0,1); } 
@@ -367,6 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    $.LoadingOverlay("hide");
 		});
 		$('input[type="checkbox"]:not(.dontHideCls)').hide();
+		$('input[type="text"],select').addClass("form-control");
 		$(".next-step").click(function(e) {
 			var $active = $('.nav-tabs li.active');
 			$active.next().removeClass('disabled');
@@ -1027,8 +697,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						%>
 						<li><a href="#small-dialog"
 							class="play-icon popup-with-zoom-anim"> <%
- 	out.print(request.getSession().getAttribute("User"));
- %>
+ 									out.print(request.getSession().getAttribute("User"));
+ 						%>
 						</a></li>
 						<%
 							} else {
@@ -1170,8 +840,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<tr>
 									<td><label style="padding-right: 20px;"><b>District</b></label>
 									</td>
-									<td><select name="district" id="district"
-										class="form-control">
+									<td><select name="district" id="district" class="form-control" >
 											<option value="0">Select District</option>
 
 									</select></td>
@@ -1193,7 +862,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<tr align="left">
 									<td><label style="padding-right: 20px;"><b>Institute</b></label></td>
 									<td><select name="institute" id="institute"
-										class="form-control" id="switch" onchange="swichReport()">
+										class="form-control" id="switch" onchange="swichReport()" style="width:100%;">
 											<option value="0">Select Institute</option>
 
 									</select></td>
