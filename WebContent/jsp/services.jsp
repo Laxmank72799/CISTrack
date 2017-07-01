@@ -1185,6 +1185,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				}
 			}
 		}
+		
+		
 	</script>
 	<!-- //here ends scrolling icon -->
 </body>
