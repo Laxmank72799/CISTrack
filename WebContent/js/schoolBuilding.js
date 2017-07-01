@@ -744,6 +744,7 @@ function getSchoolDetails() {
 									$("#CR_"+key+"_"+i+" option[value='"+value+"']").prop('selected', true);
 								}
 							else{
+								console.log(key);
 								$('#CR_'+key+"_"+i).val(value);
 							}
 						
