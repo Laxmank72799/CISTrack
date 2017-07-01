@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -49,7 +50,48 @@ public class DormitoryUpdateDao {
 		}
 		
 	}
-	 
+
+	@SuppressWarnings("rawtypes")
+	public void deleteDormitoryHallData(JSONObject jsonObject) { 
+		try {
+			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+			getNamedJdbcTemplate().update("DELETE FROM D_Hall WHERE Institution_Id=:buildingId AND Dormitory_Id=:dormitoryId", paramMap);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public void updateDormitoryHallData(JSONArray jsonArray) { 
+		try {
+			String STAFF_QUARTERS_OBJECT_MERGE_SQL = "INSERT INTO D_Hall (Institution_Id,Dormitory_Id,Hall_Id,Block_Id,Floor_Id,Plinth_Area,Ceiling_Fans,"+ 	
+					" Ceiling_Fans_Count,TubeLights,TubeLights_Count,Bulbs,Bulbs_Count,Glass_Door_Almira,Glass_Door_Almira_Count,Store_Well_Almira,Store_Well_Almira_Count,"+ 	
+					" S_Type_Chairs,S_Type_Chairs_Count,Chairs,Chairs_Count,Tables,Tables_Count,Stools,Stools_Count,Wall_Mount_Fans,"+ 
+					" Wall_Mount_Fans_Count,Pedestal_Fans,Pedestal_Fans_Count,Doors,Doors_Count,Windows,Windows_Count,Cots,Cots_Count,two_tier_cots,two_tier_cots_Count) "+ 			
+					" VALUES (:buildingId,:dormitoryId,:hallId,:blockId,:floorId,:carpetAreaCnt,:ceilingFans,:ceilingFansCnt,:tubeLights,:tubeLightsCnt,"+ 			
+					" :bulbs,:bulbsCnt,:glassDoorAlmira,:glassDoorAlmiraCnt,:storeWallAlmira,:storeWallAlmiraCnt,:sTypeChairs,:sTypeChairsCnt,"+ 
+					" :chairs,:chairsCnt,:tables,:tablesCnt,:stools,:stoolsCnt,:wallMountFans,:wallMountFansCnt,:pedestalFans,:pedestalFansCnt,"+
+					" :doors,:doorsCnt,:windows,:windowsCnt,:cots,:cotsCnt,:2TierCots,:2TierCotsCnt ) "+					
+					"ON DUPLICATE KEY UPDATE Block_Id=:blockId,Floor_Id=:floorId,Plinth_Area=:carpetAreaCnt,Ceiling_Fans=:ceilingFans,Ceiling_Fans_Count=:ceilingFansCnt,"+
+					" TubeLights=:tubeLights,TubeLights_Count=:tubeLightsCnt,Bulbs=:bulbs,Bulbs_Count=:bulbsCnt,Glass_Door_Almira=:glassDoorAlmira,"+
+					" Glass_Door_Almira_Count=:glassDoorAlmiraCnt,Store_Well_Almira=:storeWallAlmira,Store_Well_Almira_Count=:storeWallAlmiraCnt,"+
+					" S_Type_Chairs=:sTypeChairs,S_Type_Chairs_Count=:sTypeChairsCnt,Chairs=:chairs,Chairs_Count=:chairsCnt,Tables=:tables,Tables_Count=:tablesCnt,"+
+					" Stools=:stools,Stools_Count=:stoolsCnt,Wall_Mount_Fans=:wallMountFans,Wall_Mount_Fans_Count=:wallMountFansCnt,Pedestal_Fans=:pedestalFans,"+
+					" Pedestal_Fans_Count=:pedestalFansCnt, Doors=:doors,Doors_Count=:doorsCnt,Windows=:windows,Windows_Count=:windowsCnt,Cots=:cots,"+
+					" Cots_Count=:cotsCnt,two_tier_cots=:2TierCots,two_tier_cots_Count=:2TierCotsCnt";
+			
+			for(int i=0;i<jsonArray.length();i++){
+				JSONObject jsonObject = jsonArray.getJSONObject(i); 
+				Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
+				System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap));	
+				getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	@SuppressWarnings("rawtypes")
 	public void updateDormitoryObjectData(JSONObject jsonObject,String tableName,String tableColumn, List<String> replaceStrList) { 
 		try {
@@ -75,6 +117,7 @@ public class DormitoryUpdateDao {
 			Map<String, Object> paramMap = new Gson().fromJson(jsonObject.toString(), new TypeToken<HashMap<String, Object>>() {}.getType());
 			System.out.println(":::::"+STAFF_QUARTERS_OBJECT_MERGE_SQL.toString()); 
 			System.out.println(":::::"+paramMap.toString()); 
+			System.out.println(":::::"+getExecuteSql(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap)); 
 			getNamedJdbcTemplate().update(STAFF_QUARTERS_OBJECT_MERGE_SQL, paramMap);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -134,6 +177,11 @@ public class DormitoryUpdateDao {
 			e.printStackTrace();
 		}
 	}
-	
+	public String getExecuteSql(String query,Map<String, Object> map){
+		for (Map.Entry<String, Object> entry : map.entrySet()) {
+			query = query.replaceAll(":"+entry.getKey()+",", "'"+entry.getValue()+"',");
+		}
+		return query;
+	}
 	
 }
