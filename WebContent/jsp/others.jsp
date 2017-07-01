@@ -11,10 +11,10 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1001" onclick="getCompWallDetails()">Compound
-							Wall<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="checkbox"	name="CompoundWall" id="CompoundWall" />
+								href="#collapse1001" ><span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getCompWallDetails()"> Compound Wall</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+								name="CompoundWall" id="CompoundWall" />
 					</h4>
 				</div>
 				<div id="collapse1001" class="panel-collapse collapse">
@@ -74,10 +74,9 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse4211" onclick="getGuardRoomDetails()">Guard
-							room<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="GuardRoom" id="GuardRoom" />
+								href="#collapse4211" ><span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp;<a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getGuardRoomDetails()">Guard 	Room</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="GuardRoom" id="GuardRoom" />
 					</h4>
 				</div>
 				<div id="collapse4211" class="panel-collapse collapse">
@@ -137,9 +136,11 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1003" onclick="getPowSuppDetails()">Power Supply<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="PowerSupply" id="PowerSupply" />
+								href="#collapse1003" > <span class="glyphicon glyphicon-menu-down"></span></a>&nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getPowSuppDetails()">Power
+								Supply
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="PowerSupply" id="PowerSupply" />
 					</h4>
 				</div>
 
@@ -195,10 +196,10 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1004" onclick="getInternalRoadsDetails()">Internal
-							Roads<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="InternalRoads" id="InternalRoads" />
+								href="#collapse1004" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getInternalRoadsDetails()">Internal Roads
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="InternalRoads" id="InternalRoads" />
 					</h4>
 				</div>
 				<div id="collapse1004" class="panel-collapse collapse">
@@ -282,10 +283,11 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1005" onclick="getExtWaterSupDetails()">External
-							Water Supply<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="ExtWaterSupp" id="ExtWaterSupp" />
+								href="#collapse1005" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getExtWaterSupDetails()"> External
+								Water Supply
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="ExtWaterSupp" id="ExtWaterSupp" />
 					</h4>
 				</div>
 				<div id="collapse1005" class="panel-collapse collapse">
@@ -344,10 +346,11 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1007" onclick="getSanitarySysDetails()">Sanitary
-							System<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="SanitarySystem" id="SanitarySystem" />
+								href="#collapse1007" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getSanitarySysDetails()">Sanitary
+								System
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="SanitarySystem" id="SanitarySystem" />
 					</h4>
 				</div>
 				<div id="collapse1007" class="panel-collapse collapse">
@@ -415,10 +418,11 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1009" onclick="getOverheadTankDetails()">Overhead
-							Reservoir<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="OverheadTank" id="OverheadTank" />
+								href="#collapse1009" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getOverheadTankDetails()">Overhead
+								Reservoir
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="OverheadTank" id="OverheadTank" />
 					</h4>
 				</div>
 				<div id="collapse1009" class="panel-collapse collapse">
@@ -459,10 +463,11 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse1011" onclick="getPlayGroundDetails()">Play
-							Ground<span class="caret"></span>
-						</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
-							name="PlayGround" id="PlayGround" />
+								href="#collapse1011" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getPlayGroundDetails()">Play
+								Ground
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"
+								name="PlayGround" id="PlayGround" />
 					</h4>
 				</div>
 				<div id="collapse1011" class="panel-collapse collapse">
@@ -870,5 +875,21 @@ function formatCamcelCaseKey(key){
 	return key.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) { return index == 0 ? letter.toLowerCase() : letter.toUpperCase(); });
 }
 
+$(document).ready(
+		function() {
+			$('.collapse').on(
+					'shown.bs.collapse',
+					function() {
+						$(this).parent().find('.glyphicon-menu-down')
+								.removeClass('glyphicon-menu-down')
+								.addClass('glyphicon-menu-up');
+					}).on(
+					'hidden.bs.collapse',
+					function() {
+						$(this).parent().find('.glyphicon-menu-up')
+								.removeClass('glyphicon-menu-up').addClass(
+										'glyphicon-menu-down');
+					})
+		});
 
 </script>
