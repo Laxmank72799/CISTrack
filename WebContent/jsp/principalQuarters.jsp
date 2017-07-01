@@ -85,9 +85,27 @@ function addPrincQuarters() {
 			rows = rows.replace(/#I#/g,i);	
 			}
 		document.getElementById("principal").innerHTML = rows;
-		$('input[type="checkbox"]:not(.dontHideCls)').hide();
-		$('input[type="text"],select').addClass("form-control");
+		
 	}
+	
+	$(document).ready(
+			function() {
+				$('.collapse').on(
+						'shown.bs.collapse',
+						function() {
+							$(this).parent().find('.glyphicon-menu-down')
+									.removeClass('glyphicon-menu-down')
+									.addClass('glyphicon-menu-up');
+						}).on(
+						'hidden.bs.collapse',
+						function() {
+							$(this).parent().find('.glyphicon-menu-up')
+									.removeClass('glyphicon-menu-up').addClass(
+											'glyphicon-menu-down');
+						})
+			});
+	$('input[type="checkbox"]:not(.dontHideCls)').hide();
+	$('input[type="text"],select').addClass("form-control");
 }
 
 function getPLivingRoom( i)
