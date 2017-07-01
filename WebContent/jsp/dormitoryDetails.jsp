@@ -1,9 +1,8 @@
-<label style="padding-right: 20px;"><h3>Dormitory</h3></label> <input type="checkbox" style="border-color: black;padding-left: 25px;">
-	<br><br>
-	 <li style="margin-bottom:20px;" ><a href="#"><b style="color:black">Number of Halls</b><br></a><input type="text"  onchange="addHalls();" placeholder="enter no of Halls" id="hall-staff-rooms" >
-            </li>
-            <div id="hall">            
-        </div>
+<div id="dormitory" > 
+<h3 style="padding-right: 20px;">Dormitory</h3> <input type="checkbox" style="border-color: black;padding-left: 25px;">
+	<br>
+	<label style="color:black">Number of Halls</label><br>
+	 <input type="text"  style="margin-bottom:10px;width:50%;" onchange="addHalls();" placeholder="enter no of Halls" id="hall-staff-rooms" >
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -632,7 +631,8 @@
 				<input type="button" name="Cancel" value="Cancel">
 			</div>
 		</div>
-	</div>	
+	</div>
+</div>		
 <script type="text/javascript">
 function getDormitoryDetails() {	
 	var selectedValue = $('#institute').val();
@@ -994,7 +994,7 @@ function getDmCommonAreaDetails(){
 $('#dormitorySaveDiv').on('click',function(){
 	console.log('-----SchoolSave-----');
 	var dropDownId = $('#institute').val();
-	var divJson = { "dormitoryId":dropDownId,"institutionId":dropDownId,"buildingId":dropDownId };
+	var divJson = { "dormitoryId":dropDownId,"institutionId":dropDownId,"buildingId":dropDownId,'hallsArray':[] };
 	$('#dormitory >div').each(function(){
 		var $this= $(this);
 		var divThis = $($this).find('>div >div >h4').find('input'); 
@@ -1007,7 +1007,12 @@ $('#dormitorySaveDiv').on('click',function(){
 		$($this).find('>div >div.panel-collapse >div >div.table-responsive').find('select').each(function(){
 			childJson[$(this).attr('dbname')] = $(this).val();
 		});
-		divJson[$(this).find('h4').find('input').attr('dbname')+'Obj'] = childJson; 
+		if($(divThis).attr('dbname') == 'hall'){ 
+			childJson['hallId'] = (divJson['hallsArray']).length+1;
+			(divJson['hallsArray']).push(childJson);			
+		}else{
+			divJson[$(this).find('h4').find('input').attr('dbname')+'Obj'] = childJson;	
+		}
 	});
 	console.log(divJson);
 	
@@ -1035,21 +1040,22 @@ function addHalls(){
   } else {
     var rows = "";
     for (var i = 0; i < a; i++) {
-      rows += " <div class='panel panel-default' > <div class='panel-heading'> <h4 class='panel-title'> Hall<span class='caret'></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label data-toggle='collapse' data-target='#collapse5121".concat(i+1)+ "' aria-expanded='false' aria-controls='collapse5121".concat(i+1)+ "'><input type='checkbox' onClick='getHallData(#I#)'/></label> </h4> </div>"+
-      "<div id='collapse5121".concat(i+1)+ "' class='panel-collapse collapse'> <div class='panel-body'><div class='table-responsive'> "+
-      "<table class='table'> <tr><td> <label style='padding-right: 20px;padding-left: 90px;'><b>Block</b></label> <select name='H_Block_Id_#I#' id='H_Block_Id_#I#' dbname='block' class='form-control' style='width:200px;'>     <option value='0'>Select block</option> <option value='1'>1st Block</option> <option value='ADILABAD'>Second Block</option> <option value='KARIMNAGAR'>Third Block</option> </select> </td>  <td> <label style='padding-right: 20px;padding-left: 90px;'><b>Floor</b></label> <select dbname='floor' name='H_Floor_Id_#I#' id='H_Floor_Id_#I#' class='form-control' style='width:200px;'>     <option value='0'>Select floor</option> <option value='1'>Ground Floor</option> <option value='ADILABAD'>First Floor</option> <option value='KARIMNAGAR'>Second Floor</option> </select> </td></tr>"+  
-      "<tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_Count_#I#' id ='H_Plinth_Area_Count_#I#' dbname='carpetArea'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
-      "<tr><td><a href='#'>Tube Lights</a> <input type='checkbox' name='H_TubeLights_#I#' id ='H_TubeLights_#I#' dbname='tubeLight'><br> <input type='text'name='H_TubeLights_Count_#I#' id ='H_TubeLights_Count_#I#' dbname='tubeLightCount'></td><td><a href='#'>Bulbs</a> <input type='checkbox' name='H_Bulbs_#I#' id ='H_Bulbs_#I#' dbname='bulb'><br> <input type='text' name='H_Bulbs_Count_#I#' id ='H_Bulbs_Count_#I#' dbname='bulb'></td></tr>"+  
-      "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='Glassdoor_'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='GlassdoorCount'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWell'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWellCount'></td></tr>"+  
-      "<tr><td><a href='#'>S type Chairs</a> <input type='checkbox' name='H_S_Type_Chairs_#I#' id ='H_S_Type_Chairs_#I#' dbname='sTypeChairs'><br> <input type='text'name='H_S_Type_Chairs_Count_#I#' id ='H_S_Type_Chairs_Count_#I#' dbname='sTypeChairsCount'></td><td><a href='#'>Chairs</a> <input type='checkbox' name='H_Chairs_#I#' id ='H_Chairs_#I#' dbname='Chairs'><br> <input type='text' name='H_Chairs_Count_#I#' id ='H_Chairs_Count_#I#' dbname='ChairsCount'></td></tr> "+
-      "<tr><td><a href='#'>Tables</a> <input type='checkbox' name='H_Tables_#I#' id ='H_Tables_#I#' dbname='tables'><br> <input type='text' name='H_Tables_Count_#I#' id ='H_Tables_Count_#I#' dbname='tablesCount'></td><td><a href='#'>Stools</a> <input type='checkbox' name='H_Stools_#I#' id ='H_Stools_#I#' dbname='stools'><br> <input type='text' name='H_Stools_Count_#I#' id ='H_Stools_Count_#I#' dbname='stoolsCount'></td> </tr>  "+
-      "<tr><td><a href='#'>Wall Mount Fans</a> <input type='checkbox' name='H_Wall_Mount_Fans_#I#' id ='H_Wall_Mount_Fans_#I#' dbname='wallMountFans'><br> <input type='text'name='H_Wall_Mount_Fans_Count_#I#' id ='H_Wall_Mount_Fans_Count_#I#' dbname='wallMountFansCount'></td><td><a href='#'>Pedestal fans</a> <input type='checkbox' name='H_Pedestal_Fans_#I#' id ='H_Pedestal_Fans_#I#' dbname='PedestalFans'><br> <input type='text' name='H_Pedestal_Fans_Count_#I#' id ='H_Pedestal_Fans_Count_#I#' dbname='PedestalFansCount'></td> 	</tr>"+ 	 
-      "<tr><td><a href='#'>Doors</a> <input type='checkbox' name='H_Doors_#I#' id ='H_Doors_#I#' dbname='doors'><br> <input type='text' name='H_Doors_Count_#I#' id ='H_Doors_Count_#I#' dbname='doorsCount'></td><td><a href='#'>Windows</a> <input type='checkbox' name='H_Windows_#I#' id ='H_Windows_#I#' dbname='windows'><br> <input type='text' name='H_Windows_Count_#I#' id ='H_Windows_Count_#I#' dbname='windowsCount'></td> </tr> "+
-      "<tr><td><a href='#'>2-tier Cots</a> <input type='checkbox' name='H_two_tier_cots_#I#' id ='H_two_tier_cots_#I#' dbname='2TierCots'><br> <input type='text' name='H_two_tier_cots_Count_#I#' id ='H_two_tier_cots_Count_#I#' dbname='2TierCots'></td><td><a href='#'>cots</a> <input type='checkbox' name='H_Cots_#I#' id ='H_Cots_#I#' dbname='Cots'><br> <input type='text' name='H_Cots_Count_#I#' id ='H_Cots_Count_#I#' dbname='CotsCount'></td></tr></table>"+
-      "</div> </div> </div> </div>  ";
+    	 rows += "<div class='panel-group dormitoryHallDiv'><div class='panel panel-default' > <div class='panel-heading'> <h4 class='panel-title'> Hall<span class='caret'></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label data-toggle='collapse' data-target='#collapse5121".concat(i+1)+ "' aria-expanded='false' aria-controls='collapse5121".concat(i+1)+ "'><input type='checkbox' onClick='getHallData(#I#)' dbname='hall'/></label> </h4> </div>"+
+		         "<div id='collapse5121".concat(i+1)+ "' class='panel-collapse collapse'> <div class='panel-body'><div class='table-responsive'> "+
+		         "<table class='table'> <tr><td> <label style='padding-right: 20px;padding-left: 90px;'><b>Block</b></label> <select name='H_Block_Id_#I#' id='H_Block_Id_#I#' dbname='blockId' class='form-control' style='width:200px;'>     <option value='0'>Select block</option> <option value='1'>1st Block</option> <option value='2'>Second Block</option> <option value='3'>Third Block</option> </select> </td>  <td> <label style='padding-right: 20px;padding-left: 90px;'><b>Floor</b></label> <select dbname='floorId' name='H_Floor_Id_#I#' id='H_Floor_Id_#I#' class='form-control' style='width:200px;'>     <option value='0'>Select floor</option> <option value='1'>Ground Floor</option> <option value='ADILABAD'>First Floor</option> <option value='KARIMNAGAR'>Second Floor</option> </select> </td></tr>"+  
+		         "<tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_Count_#I#' id ='H_Plinth_Area_Count_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
+		         "<tr><td><a href='#'>Tube Lights</a> <input type='checkbox' name='H_TubeLights_#I#' id ='H_TubeLights_#I#' dbname='tubeLights'><br> <input type='text'name='H_TubeLights_Count_#I#' id ='H_TubeLights_Count_#I#' dbname='tubeLightsCnt'></td><td><a href='#'>Bulbs</a> <input type='checkbox' name='H_Bulbs_#I#' id ='H_Bulbs_#I#' dbname='bulbs'><br> <input type='text' name='H_Bulbs_Count_#I#' id ='H_Bulbs_Count_#I#' dbname='bulbsCnt'></td></tr>"+  
+		         "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='glassDoorAlmira'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='glassDoorAlmiraCnt'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWallAlmira'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWallAlmiraCnt'></td></tr>"+  
+		         "<tr><td><a href='#'>S type Chairs</a> <input type='checkbox' name='H_S_Type_Chairs_#I#' id ='H_S_Type_Chairs_#I#' dbname='sTypeChairs'><br> <input type='text'name='H_S_Type_Chairs_Count_#I#' id ='H_S_Type_Chairs_Count_#I#' dbname='sTypeChairsCnt'></td><td><a href='#'>Chairs</a> <input type='checkbox' name='H_Chairs_#I#' id ='H_Chairs_#I#' dbname='chairs'><br> <input type='text' name='H_Chairs_Count_#I#' id ='H_Chairs_Count_#I#' dbname='chairsCnt'></td></tr> "+
+		         "<tr><td><a href='#'>Tables</a> <input type='checkbox' name='H_Tables_#I#' id ='H_Tables_#I#' dbname='tables'><br> <input type='text' name='H_Tables_Count_#I#' id ='H_Tables_Count_#I#' dbname='tablesCnt'></td><td><a href='#'>Stools</a> <input type='checkbox' name='H_Stools_#I#' id ='H_Stools_#I#' dbname='stools'><br> <input type='text' name='H_Stools_Count_#I#' id ='H_Stools_Count_#I#' dbname='stoolsCnt'></td> </tr>  "+
+		         "<tr><td><a href='#'>Wall Mount Fans</a> <input type='checkbox' name='H_Wall_Mount_Fans_#I#' id ='H_Wall_Mount_Fans_#I#' dbname='wallMountFans'><br> <input type='text'name='H_Wall_Mount_Fans_Count_#I#' id ='H_Wall_Mount_Fans_Count_#I#' dbname='wallMountFansCnt'></td><td><a href='#'>Pedestal fans</a> <input type='checkbox' name='H_Pedestal_Fans_#I#' id ='H_Pedestal_Fans_#I#' dbname='pedestalFans'><br> <input type='text' name='H_Pedestal_Fans_Count_#I#' id ='H_Pedestal_Fans_Count_#I#' dbname='pedestalFansCnt'></td> 	</tr>"+ 	 
+		         "<tr><td><a href='#'>Doors</a> <input type='checkbox' name='H_Doors_#I#' id ='H_Doors_#I#' dbname='doors'><br> <input type='text' name='H_Doors_Count_#I#' id ='H_Doors_Count_#I#' dbname='doorsCnt'></td><td><a href='#'>Windows</a> <input type='checkbox' name='H_Windows_#I#' id ='H_Windows_#I#' dbname='windows'><br> <input type='text' name='H_Windows_Count_#I#' id ='H_Windows_Count_#I#' dbname='windowsCnt'></td> </tr> "+
+		         "<tr><td><a href='#'>2-tier Cots</a> <input type='checkbox' name='H_two_tier_cots_#I#' id ='H_two_tier_cots_#I#' dbname='2TierCots'><br> <input type='text' name='H_two_tier_cots_Count_#I#' id ='H_two_tier_cots_Count_#I#' dbname='2TierCotsCnt'></td><td><a href='#'>cots</a> <input type='checkbox' name='H_Cots_#I#' id ='H_Cots_#I#' dbname='cots'><br> <input type='text' name='H_Cots_Count_#I#' id ='H_Cots_Count_#I#' dbname='cotsCnt'></td></tr></table>"+
+		         "</div> </div> </div> </div></div> ";
       rows = rows.replace(/#I#/g,i);
     }
-    document.getElementById("hall").innerHTML = rows;
+   $('.dormitoryHallDiv').remove();
+   $('#hall-staff-rooms').after(rows);
   }
 }
 //getHallData(#I#)

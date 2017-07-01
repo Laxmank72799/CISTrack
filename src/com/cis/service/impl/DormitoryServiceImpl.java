@@ -81,6 +81,9 @@ public class DormitoryServiceImpl implements  DormitoryService {
 	public JSONObject updateDormitoryDetails(JSONObject dormitoryJson) {
 		try {
 				dmUpdateDao.updateDormitoryData(dormitoryJson);
+				dmUpdateDao.deleteDormitoryHallData(dormitoryJson);
+				dmUpdateDao.updateDormitoryHallData(dormitoryJson.getJSONArray("hallsArray"));
+				
 				List<String> replaceStrList = new ArrayList();
 				dmUpdateDao.updateDormitoryObjectData(dormitoryJson.getJSONObject("wardenHallObj"),"D_Warden_Hall","Warden_Id",replaceStrList);
 				
