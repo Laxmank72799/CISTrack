@@ -8,10 +8,13 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						Warden Hall<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse512"
-							aria-expanded="false" aria-controls="collapse512"><input
-							type="checkbox" id="wardenHall" dbname="wardenHall" onclick="getDmWardenHallDetails();"/></label>
+					
+						<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse512" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmWardenHallDetails();">Warden Hall
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="wardenHall" dbname="wardenHall"/>
+						
 					</h4>
 				</div>
 				<div id="collapse512" class="panel-collapse collapse">
@@ -120,11 +123,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Office Hall<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse520"
-							aria-expanded="false" aria-controls="collapse520"><input
-							type="checkbox" name="officehall" id="officehall" dbname="officeHall" /></label>
+					<h4 class="panel-title">						
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse520"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmOfficeDetails();">Office Room
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" name="officehall" id="officehall" dbname="officeHall" />
 					</h4>
 				</div>
 				<div id="collapse520" class="panel-collapse collapse">
@@ -231,11 +235,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Waiting Hall<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse521"
-							aria-expanded="false" aria-controls="collapse521"><input
-							type="checkbox" name="waitinghall" id="waitinghall" dbname="waitingHall" /></label>
+					<h4 class="panel-title">									
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse521"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmWaitingHallDetails();">Waiting Hall
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" name="waitinghall" id="waitinghall" dbname="waitingHall" />
 					</h4>
 				</div>
 				<div id="collapse521" class="panel-collapse collapse">
@@ -335,11 +340,13 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Clinic Hall<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse525"
-							aria-expanded="false" aria-controls="collapse525"><input
-							type="checkbox" name="clinichall" id="clinichall" dbname="clinicHall" /></label>
+					<h4 class="panel-title">					
+						<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse525"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmClinicDetails();">Clinic Hall
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" name="clinichall" id="clinichall" dbname="clinicHall" />
+							
 					</h4>
 				</div>
 				<div id="collapse525" class="panel-collapse collapse">
@@ -448,11 +455,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Toilets<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse526"
-							aria-expanded="false" aria-controls="collapse526"><input
-							type="checkbox" id="dm_toilets" dbname="toilets" /></label>
+					<h4 class="panel-title">												
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse526"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmToiletsDetails();">Toilets
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="dm_toilets" dbname="toilets" />							
 					</h4>
 				</div>
 				<div id="collapse526" class="panel-collapse collapse">
@@ -505,11 +513,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Bathrooms<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse527"
-							aria-expanded="false" aria-controls="collapse527"><input
-							type="checkbox" id="dm_bathhroom" dbname="bathRooms"/></label>
+					<h4 class="panel-title">													
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse527"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmBathroomDetails();">Bathrooms
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="dm_bathhroom" dbname="bathRooms"/>
 					</h4>
 				</div>
 				<div id="collapse527" class="panel-collapse collapse">
@@ -557,11 +566,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title">
-						Common Area<span class="caret"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
-							data-toggle="collapse" data-target="#collapse5271"
-							aria-expanded="false" aria-controls="collapse5271"><input
-							type="checkbox" id="dm_commonArea" dbname="commonArea" /></label>
+					<h4 class="panel-title">													
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse5271"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" onclick="getDmCommonAreaDetails();">Common Area
+							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="checkbox" id="dm_commonArea" dbname="commonArea" />
 					</h4>
 				</div>
 				<div id="collapse5271" class="panel-collapse collapse">
