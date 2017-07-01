@@ -1,4 +1,22 @@
+function populateAllFlds(){
+	getLibraryDetails();
+	getPrincipalDetails();
+	getEntranceRoomDetails();
+	getStoreRoomDetails();
+	getStaffRoomDetails();
+	getGamesRoomDetails();
+	getBotanyLabDetails();
+	getPhysicsLabDetails();
+	getChemistryLabDetails();
+	getZoolagyLabDetails();
+	getComputerLabDetails();
+	getToiletDetails();
+	getClassRoomDetails();
+	getSchCommonAreaDetails();
+}
+
 function getSchoolDetails() {
+		populateAllFlds();
 		var selectedValue = $('#institute').val();
 		$.ajax({
 			type : 'POST',

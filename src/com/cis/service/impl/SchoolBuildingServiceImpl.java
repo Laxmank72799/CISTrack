@@ -71,6 +71,9 @@ public class SchoolBuildingServiceImpl implements SchoolBuildingService {
 			System.out.println(classJson.getJSONArray("classRoomArr"));
 			sbDao.updateClassRoomData(classJson.getJSONArray("classRoomArr"),classJson.getString("schoolBuildingId"));
 			
+			System.out.println(requestJson.getJSONObject("#CommonArea"));
+			sbDao.updateCommonAreaData(requestJson.getJSONObject("#CommonArea"));
+			
 			System.out.println("::::::::School Builing Successfully Saved::::::");
 		} catch (Exception e) {
 			e.printStackTrace();
