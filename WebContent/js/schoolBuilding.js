@@ -133,13 +133,13 @@ function getSchoolDetails() {
 				$("#P_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
 
 				$("#P_ptable").attr('checked', data.Principal_Table);
-				$("#P_ptable_Count").val(data.Principal_Table_Count);
+				$("#P_Principal_Table_Count").val(data.Principal_Table_Count);
 
 				$("#P_pchair").attr('checked', data.Principal_Chair);
-				$("#P_pchair_Count").val(data.Principal_Chair_Count);
+				$("#P_Principal_Chair_Count").val(data.Principal_Chair_Count);
 
 				$("#P_Lockerunits").attr('checked', data.Locker_Units);
-				$("#P_Lockerunits_Count").val(data.Locker_Units_Count);
+				$("#P_Locker_Units_Count").val(data.Locker_Units_Count);
 			},
 			failure : function() {
 				alert("Failed!");
@@ -238,7 +238,7 @@ function getSchoolDetails() {
 				$("#SR_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
 
 				$("#SR_Lockerunits").attr('checked', data.Locker_Units);
-				$("#SR_Lockerunits_Count").val(data.Locker_Units_Count);
+				$("#SR_Locker_Units_Count").val(data.Locker_Units_Count);
 			},
 			failure : function() {
 				alert("Failed!");
@@ -294,7 +294,7 @@ function getSchoolDetails() {
 				$("#ST_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
 
 				$("#ST_Lockerunits").attr('checked', data.Locker_Units);
-				$("#ST_Lockerunits_Count").val(data.Locker_Units_Count);
+				$("#ST_Locker_Units_Count").val(data.Locker_Units_Count);
 			},
 			failure : function() {
 				alert("Failed!");
@@ -350,7 +350,7 @@ function getSchoolDetails() {
 				$("#GR_Store-Well-Almira_Count").val(data.Store_Well_Almira_Count);
 
 				$("#GR_Lockerunits").attr('checked', data.Locker_Units);
-				$("#GR_Lockerunits_Count").val(data.Locker_Units_Count);
+				$("#GR_Locker_Units_Count").val(data.Locker_Units_Count);
 			},
 			failure : function() {
 				alert("Failed!");
@@ -403,7 +403,7 @@ function getSchoolDetails() {
 	       			$("#BL_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
 					
 					$("#BL_Lockerunits").attr('checked', data.Locker_Units);
-	       			$("#BL_Lockerunits_Count").val( data.Locker_Units_Count);
+	       			$("#BL_Locker_Units_Count").val( data.Locker_Units_Count);
 				
 					$("#BL_Green_Board").attr('checked', data.Green_Board);
 	       			$("#BL_Green_Board_Count").val( data.Green_Board_Count);
@@ -459,7 +459,7 @@ function getSchoolDetails() {
  	        			$("#CL_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
 							
 						$("#CL_Lockerunits").attr('checked', data.Locker_Units);
- 	        			$("#CL_Lockerunits_Count").val( data.Locker_Units_Count);
+ 	        			$("#CL_Locker_Units_Count").val( data.Locker_Units_Count);
 						
 						$("#CL_Green_Board").attr('checked', data.Green_Board);
  	        			$("#CL_Green_Board_Count").val( data.Green_Board_Count);
@@ -516,7 +516,7 @@ function getSchoolDetails() {
  	        			$("#PL_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
 							
 						$("#PL_Lockerunits").attr('checked', data.Locker_Units);
- 	        			$("#PL_Lockerunits_Count").val( data.Locker_Units_Count);
+ 	        			$("#PL_Locker_Units_Count").val( data.Locker_Units_Count);
 						
 						$("#PL_Green_Board").attr('checked', data.Green_Board);
  	        			$("#PL_Green_Board_Count").val( data.Green_Board_Count);
@@ -576,7 +576,7 @@ function getSchoolDetails() {
 	 	        			$("#ZL_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
 								
 							$("#ZL_Lockerunits").attr('checked', data.Locker_Units);
-	 	        			$("#ZL_Lockerunits_Count").val( data.Locker_Units_Count);
+	 	        			$("#ZL_Locker_Units_Count").val( data.Locker_Units_Count);
 							
 							$("#ZL_Green_Board").attr('checked', data.Green_Board);
 	 	        			$("#ZL_Green_Board_Count").val( data.Green_Board_Count);
@@ -638,7 +638,7 @@ function getSchoolDetails() {
 	 	        			$("#CO_Store-Well-Almira_Count").val( data.Store_Well_Almira_Count);
 								
 							$("#CO_Lockerunits").attr('checked', data.Locker_Units);
-	 	        			$("#CO_Lockerunits_Count").val( data.Locker_Units_Count);
+	 	        			$("#CO_Locker_Units_Count").val( data.Locker_Units_Count);
 							
 							$("#CO_Green_Board").attr('checked', data.Green_Board);
 	 	        			$("#CO_Green_Board_Count").val( data.Green_Board_Count);
