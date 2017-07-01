@@ -9,8 +9,8 @@
 					<h4 class="panel-title">
 					
 						<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse512" > <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmWardenHallDetails();">Warden Hall
+								href="#collapse512" > <span class="glyphicon glyphicon-menu-down" onclick="getDmWardenHallDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Warden Hall
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" id="wardenHall" dbname="wardenHall"/>
 						
@@ -124,8 +124,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">						
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse520"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmOfficeDetails();">Office Room
+								href="#collapse520"> <span class="glyphicon glyphicon-menu-down" onclick="getDmOfficeDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Office Room
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" name="officehall" id="officehall" dbname="officeHall" />
 					</h4>
@@ -236,8 +236,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">									
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse521"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmWaitingHallDetails();">Waiting Hall
+								href="#collapse521"> <span class="glyphicon glyphicon-menu-down" onclick="getDmWaitingHallDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Waiting Hall
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" name="waitinghall" id="waitinghall" dbname="waitingHall" />
 					</h4>
@@ -272,8 +272,8 @@
 
 								<tr>
 									<td><a href="#">Carpet Area</a> <input type="checkbox"
-										name="d_waiting_Plinth_Area" id="d_waiting_Plinth_Area" dbname="carpetArea" /><br> <input
-										type="text" name="d_waiting_Plinth_Area_check" id="d_waiting_Plinth_Area_check" dbname="carpetAreaCnt"/></td>
+										name="d_waiting_Plinth_Area_check" id="d_waiting_Plinth_Area_check" dbname="carpetArea" /><br> <input
+										type="text" name="d_waiting_Plinth_Area" id="d_waiting_Plinth_Area" dbname="carpetAreaCnt"/></td>
 									<td><a href="#">Ceiling Fans</a> <input type="checkbox"
 										name="Plinth_Area" id="Plinth_Area" dbname="ceilingFans"/><br> <input
 										type="text" name="d_waiting_celing_fan" id="d_waiting_celing_fan" dbname="ceilingFansCnt"/></td>
@@ -341,8 +341,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">					
 						<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse525"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmClinicDetails();">Clinic Hall
+								href="#collapse525"> <span class="glyphicon glyphicon-menu-down" onclick="getDmClinicDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Clinic Hall
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" name="clinichall" id="clinichall" dbname="clinicHall" />
 							
@@ -456,8 +456,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">												
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse526"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmToiletsDetails();">Toilets
+								href="#collapse526"> <span class="glyphicon glyphicon-menu-down" onclick="getDmToiletsDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Toilets
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" id="dm_toilets" dbname="toilets" />							
 					</h4>
@@ -514,8 +514,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">													
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse527"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmBathroomDetails();">Bathrooms
+								href="#collapse527"> <span class="glyphicon glyphicon-menu-down" onclick="getDmBathroomDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Bathrooms
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" id="dm_bathhroom" dbname="bathRooms"/>
 					</h4>
@@ -567,8 +567,8 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">													
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapse5271"> <span class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
-								href="#" onclick="getDmCommonAreaDetails();">Common Area
+								href="#collapse5271"> <span class="glyphicon glyphicon-menu-down" onclick="getDmCommonAreaDetails();"></span></a> &nbsp;&nbsp; <a data-toggle="collapse" data-parent="#accordion"
+								href="#" >Common Area
 							</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							type="checkbox" id="dm_commonArea" dbname="commonArea" />
 					</h4>
@@ -746,7 +746,7 @@ function getDmOfficeDetails(){
 		},
 		dataType : 'json',
 		success : function(data) {
-			$("#d_office_Plinth_Area").val(data.Plinth_Area_Count);
+			$("#d_office_Plinth_Area").val(data.Plinth_Area);
 			$("#d_office_celing_fan").val(data.Ceiling_Fans_Count);
 			$("#d_office_tube_light").val(data.TubeLights_Count);
 			$("#d_office_bulb").val(data.Bulbs_Count);
@@ -1040,10 +1040,10 @@ function addHalls(){
   } else {
     var rows = "";
     for (var i = 0; i < a; i++) {
-    	 rows += "<div class='panel-group dormitoryHallDiv'><div class='panel panel-default' > <div class='panel-heading'> <h4 class='panel-title'> Hall<span class='caret'></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label data-toggle='collapse' data-target='#collapse5121".concat(i+1)+ "' aria-expanded='false' aria-controls='collapse5121".concat(i+1)+ "'><input type='checkbox' onClick='getHallData(#I#)' dbname='hall'/></label> </h4> </div>"+
+    	 rows += "<div data-toggle='collapse' data-target='#collapse5121".concat(i+1)+ "' aria-expanded='false' aria-controls='collapse5121".concat(i+1)+ " class='panel-group dormitoryHallDiv'><div class='panel panel-default' > <div class='panel-heading'> <h4 class='panel-title'> <span class='glyphicon glyphicon-menu-down' onClick='getHallData(#I#)' ></span> Hall&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input type='checkbox' dbname='hall' /></label> </h4> </div>"+
 		         "<div id='collapse5121".concat(i+1)+ "' class='panel-collapse collapse'> <div class='panel-body'><div class='table-responsive'> "+
 		         "<table class='table'> <tr><td> <label style='padding-right: 20px;padding-left: 90px;'><b>Block</b></label> <select name='H_Block_Id_#I#' id='H_Block_Id_#I#' dbname='blockId' class='form-control' style='width:200px;'>     <option value='0'>Select block</option> <option value='1'>1st Block</option> <option value='2'>Second Block</option> <option value='3'>Third Block</option> </select> </td>  <td> <label style='padding-right: 20px;padding-left: 90px;'><b>Floor</b></label> <select dbname='floorId' name='H_Floor_Id_#I#' id='H_Floor_Id_#I#' class='form-control' style='width:200px;'>     <option value='0'>Select floor</option> <option value='1'>Ground Floor</option> <option value='ADILABAD'>First Floor</option> <option value='KARIMNAGAR'>Second Floor</option> </select> </td></tr>"+  
-		         "<tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_Count_#I#' id ='H_Plinth_Area_Count_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
+		         "<tr> <td><a href='#'>Carpet Area</a> <input type='checkbox'><br> <input type='text' name='H_Plinth_Area_#I#' id ='H_Plinth_Area_#I#' dbname='carpetAreaCnt'></td><td><a href='#'>Ceiling Fans</a> <input type='checkbox' name='H_Ceiling_Fans_#I#' id ='H_Ceiling_Fans_#I#' dbname='ceilingFans'><br> <input type='text' name='H_Ceiling_Fans_Count_#I#' id ='H_Ceiling_Fans_Count_#I#' dbname='ceilingFansCnt'></td> 	</tr>  "+
 		         "<tr><td><a href='#'>Tube Lights</a> <input type='checkbox' name='H_TubeLights_#I#' id ='H_TubeLights_#I#' dbname='tubeLights'><br> <input type='text'name='H_TubeLights_Count_#I#' id ='H_TubeLights_Count_#I#' dbname='tubeLightsCnt'></td><td><a href='#'>Bulbs</a> <input type='checkbox' name='H_Bulbs_#I#' id ='H_Bulbs_#I#' dbname='bulbs'><br> <input type='text' name='H_Bulbs_Count_#I#' id ='H_Bulbs_Count_#I#' dbname='bulbsCnt'></td></tr>"+  
 		         "<tr><td><a href='#'>Glass Door Almira</a> <input type='checkbox' name='H_Glass_Door_Almira_#I#' id ='H_Glass_Door_Almira_#I#' dbname='glassDoorAlmira'><br> <input type='text' name='H_Glass_Door_Almira_Count_#I#' id ='H_Glass_Door_Almira_Count_#I#' dbname='glassDoorAlmiraCnt'></td><td><a href='#'>Storewell Almira</a> <input type='checkbox' name='H_Store_Well_Almira_#I#' id ='H_Store_Well_Almira_#I#' dbname='storeWallAlmira'><br> <input type='text' name='H_Store_Well_Almira_Count_#I#' id ='H_Store_Well_Almira_Count_#I#' dbname='storeWallAlmiraCnt'></td></tr>"+  
 		         "<tr><td><a href='#'>S type Chairs</a> <input type='checkbox' name='H_S_Type_Chairs_#I#' id ='H_S_Type_Chairs_#I#' dbname='sTypeChairs'><br> <input type='text'name='H_S_Type_Chairs_Count_#I#' id ='H_S_Type_Chairs_Count_#I#' dbname='sTypeChairsCnt'></td><td><a href='#'>Chairs</a> <input type='checkbox' name='H_Chairs_#I#' id ='H_Chairs_#I#' dbname='chairs'><br> <input type='text' name='H_Chairs_Count_#I#' id ='H_Chairs_Count_#I#' dbname='chairsCnt'></td></tr> "+
@@ -1054,8 +1054,10 @@ function addHalls(){
 		         "</div> </div> </div> </div></div> ";
       rows = rows.replace(/#I#/g,i);
     }
-   $('.dormitoryHallDiv').remove();
-   $('#hall-staff-rooms').after(rows);
+   	$('.dormitoryHallDiv').remove();
+   	$('#hall-staff-rooms').after(rows);
+   	$('input[type="checkbox"]:not(.dontHideCls)').hide();
+	$('input[type="text"],select').addClass("form-control");
   }
 }
 //getHallData(#I#)
@@ -1066,7 +1068,7 @@ var selectedValue = $('#institute').val();
 		type : 'POST',
 		url : "../dormitory/getHallData.htm",
 		data : {
-			'instituteid' : selectedValue,'hallId':i
+			'instituteid' : selectedValue,'hallId':(i+1)
 		},
 		dataType : 'json',
 		success : function(data) {
