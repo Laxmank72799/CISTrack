@@ -30,9 +30,8 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse1"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getLibraryDetails();">Library Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span> 
+											Library Room </a><input
 											type="checkbox" type="checkbox" name="library_room"
 											id="library_room">
 									</h4>
@@ -116,9 +115,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse2"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getPrincipalDetails();">Principal Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Principal Room </a>&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="principal_room" id="principal_room" />
 									</h4>
 								</div>
@@ -210,8 +207,8 @@
 														name="P_Store-Well-Almira_Count"
 														id="P_Store-Well-Almira_Count" /></td>
 												</tr>
-												<input type="text" name="P_Principal_Room_Id"
-													id="P_Principal_Room_Id" hidden="true" />
+												<tr><td><input type="text" name="P_Principal_Room_Id"
+													id="P_Principal_Room_Id" hidden="true" /></td></tr>
 											</table>
 										</div>
 									</div>
@@ -222,9 +219,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse3"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getEntranceRoomDetails()">Entrance Hall </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Entrance Hall </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="entrancehall" id="entrancehall" />
 									</h4>
 								</div>
@@ -280,9 +275,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse4"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getStoreRoomDetails();">Office Store </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Office Store </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="officestoreroom" id="officestoreroom" />
 									</h4>
 								</div>
@@ -371,9 +364,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse5"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getStaffRoomDetails()">Staff Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Staff Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="staffroom" id="staffroom" />
 									</h4>
 								</div>
@@ -461,9 +452,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse6"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getGamesRoomDetails()">Games Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Games Room </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="gamesroom" id="gamesroom" />
 									</h4>
 								</div>
@@ -556,9 +545,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse11"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getBotanyLabDetails()">Botany Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Botany Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="botanylab" id="botanylab" />
 									</h4>
 								</div>
@@ -647,9 +634,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse12"><span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getPhysicsLabDetails()">Physics Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Physics Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="physicslab" id="physicslab" />
 									</h4>
 								</div>
@@ -739,9 +724,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse13"> <span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getChemistryLabDetails()">Chemistry Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Chemistry Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="chemistrylab" id="chemistrylab" />
 
 									</h4>
@@ -832,9 +815,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse14"> <span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getZoolagyLabDetails()">Zoology Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Zoology Lab</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 											type="checkbox" name="zoologylab" id="zoologylab" />
 									</h4>
 								</div>
@@ -926,9 +907,7 @@
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion"
 											href="#collapse15"> <span
-											class="glyphicon glyphicon-menu-down"></span></a> &nbsp;&nbsp; <a
-											data-toggle="collapse" data-parent="#accordion" href="#"
-											onclick="getComputerLabDetails()">Computers Lab</a>&nbsp;&nbsp;<input
+											class="glyphicon glyphicon-menu-down">&nbsp;</span>Computers Lab</a>&nbsp;&nbsp;<input
 											type="checkbox" name="computerslab" id="computerslab" />
 									</h4>
 								</div>
@@ -1166,7 +1145,7 @@ $('#schoolBuildingSaveDiv').on('click',function(){
 		console.log(divHrefId);
 		divJson =  {"schoolBuildingId":dropDownId};
 		if(divHrefId == '#home' || divHrefId == '#lab'){ 
-			$(divHrefId+' >div >div >div >div > h4 >a').each(function(){
+			$(divHrefId+' >div >div >div >div >h4 >a').each(function(){
 				var $this1 = $(this);
 				console.log($($this1).attr('href'));
 				var divFldHref = $($this1).attr('href');
